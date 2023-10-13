@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body className="p-0 bg-[url('/resources/bg4.jpg')] 
-					bg-bottom bg-cover bg-fixed font-caslon">
+					bg-bottom bg-cover bg-fixed font-caslon text-white">
 				<Main />
         <NextScript />
       </body>
