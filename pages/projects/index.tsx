@@ -35,7 +35,7 @@ const Projects = () => {
 			name: "Portafolio",
 			desc: "Mi portafolio",
 			technologies: ["NextJS", "Tailwind CSS"],
-			code: ""
+			code: "https://github.com/Mathi21as/portafolio"
 		},
 		{
 			imagen: "/resources/projects/encriptador.png",

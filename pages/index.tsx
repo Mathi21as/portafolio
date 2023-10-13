@@ -135,7 +135,7 @@ export default function Home() {
 							Habilidades
 						</a>
 						<a 
-							href="#proyectos" 
+							href="/projects" 
 							className='w-max mx-auto md:my-3 my-auto'
 							>
 							Proyectos
