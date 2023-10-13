@@ -187,7 +187,7 @@ export default function Home() {
 					</h3>
 					<Image 
 						className='md:absolute md:right-20 md:top-12 mx-auto  rounded-xl'
-						src={"/resources/foto.jpg"} 
+						src={"https://github.com/Mathi21as/portafolio/blob/main/public/resources/foto.jpg"} 
 						alt='my photo' 
 						width={170} 
 						height={170}
