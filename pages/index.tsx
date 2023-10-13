@@ -134,12 +134,12 @@ export default function Home() {
 							> 
 							Habilidades
 						</a>
-						<a 
+						<Link 
 							href="/projects" 
 							className='w-max mx-auto md:my-3 my-auto'
 							>
 							Proyectos
-						</a>
+						</Link>
 						<Link 
 							href="/blog" 
 							className='w-max mx-auto md:my-3 my-auto'
