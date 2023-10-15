@@ -17,39 +17,39 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" /> 
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main 
-				className="w-full"
-				>
-				<nav 
+			<nav 
 					className='fixed top-0 md:bottom-0 md:right-0 h-14 w-full 
 					w-full bg-neutral-950/90 flex flex-row justify-center 
 					text-sm md:text-lg z-10'
 					>
-						<a 
-							href="#sobremi"
-							className='w-max mx-auto md:my-3 my-auto'
-							>
-							Sobre mi
-						</a>
-						<a 
-							href="#habilidades" 
-							className='w-max mx-auto md:my-3 my-auto'
-							> 
-							Habilidades
-						</a>
-						<a 
-							href="#proyectos" 
-							className='w-max mx-auto md:my-3 my-auto'
-							>
-							Proyectos
-						</a>
-						<a 
-							href="#contacto" 
-							className='w-max mx-auto md:my-3 my-auto'
-							>
-							Contacto
-						</a>
-				</nav>
+					<a 
+						href="#sobremi"
+						className='w-max mx-auto md:my-3 my-auto'
+						>
+						Sobre mi
+					</a>
+					<a 
+						href="#habilidades" 
+						className='w-max mx-auto md:my-3 my-auto'
+						> 
+						Habilidades
+					</a>
+					<a 
+						href="#proyectos" 
+						className='w-max mx-auto md:my-3 my-auto'
+						>
+						Proyectos
+					</a>
+					<a 
+						href="#contacto" 
+						className='w-max mx-auto md:my-3 my-auto'
+						>
+						Contacto
+					</a>
+			</nav>
+      <main 
+				className="w-full"
+				>
         <div 
 					className='h-screen flex flex-col justify-center'
 					>
