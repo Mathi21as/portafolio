@@ -56,7 +56,7 @@ export default function Home() {
 					<div className="flex flex-col md:h-max align-bottom md:flex-row">
 						<Image 
 						className='mx-auto md:mx-10 mb-10 md:mb-0 rounded-xl'
-						src={"/resources/foto.jpg"} 
+						src="/resources/foto.jpg"
 						alt='my photo' 
 						width={170} 
 						height={170}/>
