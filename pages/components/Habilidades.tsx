@@ -108,7 +108,7 @@ const Habilidades = () => {
 				<div className='w-full flex flex-col gap-16'>
 					{
 						icons.map((icon:any, index:number) => {
-							return <CardHabilidades side={index == 0 ? "Frontend" : "Backend"} key={index} icons={icon}/>
+							return <CardHabilidades side={index == 0 ? "Frontend" : "Backend"} key={index} icons={icon} />
 						})
 					}
 				</div>
