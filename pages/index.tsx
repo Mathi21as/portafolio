@@ -4,11 +4,27 @@ import Image from 'next/image'
 import Footer from './components/Footer'
 import Projects from './components/Projects'
 import Habilidades from './components/Habilidades'
+import React from 'react'
+import i18n from '@/i18n'
+import { useTranslation } from 'react-i18next'
 
 
 const inter:object = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+	const [language, setLanguage] = React.useState("es-ES")
+
+	const {t} = useTranslation();
+
+	const handleChangeLanguage = () => {
+		if(i18n.language == "es-ES"){
+			i18n.changeLanguage("en-IN")
+			setLanguage("en-IN")
+		} else {
+		i18n.changeLanguage("es-ES")
+		setLanguage("es-ES")
+		}
+	}
   return (
     <>
       <Head>
@@ -20,63 +36,70 @@ export default function Home() {
 			<nav 
 					className='fixed top-0 md:bottom-0 md:right-0 h-14 w-full 
 					w-full bg-neutral-950/90 flex flex-row justify-center 
-					text-sm md:text-lg z-10'
+					text-sm md:text-lg z-10 md:[&>*]:scale-90'
 					>
 					<a 
 						href="#sobremi"
 						className='w-max mx-auto md:my-3 my-auto'
 						>
-						Sobre mi
+						{t("About me")}
 					</a>
 					<a 
 						href="#habilidades" 
 						className='w-max mx-auto md:my-3 my-auto'
 						> 
-						Habilidades
+						{t("Skills")}
 					</a>
 					<a 
 						href="#proyectos" 
 						className='w-max mx-auto md:my-3 my-auto'
 						>
-						Proyectos
+						{t("Projects")}
 					</a>
+					<button 
+						onClick={()=>handleChangeLanguage()}
+						className='w-max mx-auto md:my-3 my-auto'
+						>
+						{t("Change language")}
+					</button>
 					<a 
 						href="#contacto" 
 						className='w-max mx-auto md:my-3 my-auto'
 						>
-						Contacto
+						{t("Contact")}
 					</a>
 			</nav>
       <main 
 				className="w-full"
 				>
         <div 
-					className='h-screen flex flex-col justify-center'
+					className='flex flex-col md:flex-row justify-center pt-56'
 					>
-					<div className="flex flex-col md:h-max align-bottom md:flex-row">
-						<Image 
-						className='mx-auto md:mx-10 mb-10 md:mb-0 rounded-xl'
+					<Image 
+						className='mx-auto h-max md:mx-10 mb-10 md:mb-0 rounded-xl'
 						src="/resources/foto.jpg"
 						alt='my photo' 
 						width={170} 
 						height={170}/>
+					<div className="flex flex-col md:h-max md:flex-col">
 						<h1 
-							className='mx-auto ml-5 md:mr-20 md:ml-10 h-full md:pr-16 
-							md:pr-40 w-fit align-bottom text-5xl md:text-8xl opacity-80'
+							className='mx-auto ml-5 md:mr-20 md:ml-10 h-full md:pr-16 h-max
+							md:pr-40 w-fit text-5xl md:text-7xl opacity-80'
 							>
 							Mathias Ledesma
 						</h1>
+						<h2 
+							className='overflow-hidden whitespace-nowrap border-r-4 w-max opacity-80
+								border-blue-500 w-0 m-0 m-auto animate-typing_mobile md:animate-typing text-4xl md:text-5xl'
+							>
+							{t("Full-Stack Developer")}
+						</h2>
 					</div>
 					<div 
 						className='mx-auto md:ml-48 mt-3 md:mb-20 pl-20 md:pl-40 
 						mb-10 mt-5 w-fit opacity-80'
 						>
-						<h2 
-							className='overflow-hidden whitespace-nowrap border-r-4 
-								border-blue-500 w-0 m-0 m-auto animate-typing text-4xl md:text-6xl'
-							>
-							Desarrollador Full-Stack
-						</h2>
+						
 					</div>
 				</div>
 				<section 
@@ -87,17 +110,21 @@ export default function Home() {
 					<h3 
 						className='text-4xl md:text-5xl md:mt-20 mx-auto md:mx-0'
 						>
-						Sobre mi
+						{t("About me")}
 					</h3>
-					<p className='mt-12 md:mt-10 text-xl md:text-2xl mx-auto'>
-						Soy un apasionado del desarrollo web en 
-						el cual tengo conocimientos y experiencia en el campo del front-end. 
-						Hace unos años descubrí la programación y estudie de manera 
-						autodidacta adquiriendo habilidades en esta área. Aunque tengo los 
-						conocimientos para ser un desarrollador front-end, me gusta más la 
-						lógica que el diseño, por lo que decidí comenzar a estudiar temas 
-						relacionados al área de back-end y realizar proyectos para tener 
-						experiencia al momento de trabajar como back-end o full-stack.
+					<p className='mt-12 md:mt-10 text-xl md:text-2xl font-light mx-auto'>
+						{t("I am passionate about web development and have solid \
+			experience and skills in the front-end field. A few years \
+			ago, I entered the world of programming as a self-taught \
+			person and have been perfecting my knowledge in this area. \
+			Although I have the necessary foundation to work as a front-end \
+			developer, I feel a greater affinity for logic and programming \
+			than for design. For this reason, I decided to embark on a training \
+			process in the field of back-end and, at the same time, carry out \
+			various projects to accumulate experience. My goal is to prepare \
+			for a career as a back-end or full-stack developer, as I am convinced \
+			that my passion and skills in programming will lead me to achieve \
+			my goals in this area.")}
 					</p>
 				</section>
 				<a id="habilidades"></a>
@@ -110,7 +137,7 @@ export default function Home() {
 					<h3
 						className='text-4xl md:text-5xl mb-16 mx-auto w-max md:mx-0'
 					>
-						Proyectos
+						{t("Projects")}
 					</h3>
 					<Projects />
 				</section>
@@ -120,3 +147,16 @@ export default function Home() {
     </>
   )
 }
+
+/*
+
+Soy un apasionado del desarrollo web en 
+						el cual tengo conocimientos y experiencia en el campo del front-end. 
+						Hace unos años descubrí la programación y estudie de manera 
+						autodidacta adquiriendo habilidades en esta área. Aunque tengo los 
+						conocimientos para ser un desarrollador front-end, me gusta más la 
+						lógica que el diseño, por lo que decidí comenzar a estudiar temas 
+						relacionados al área de back-end y realizar proyectos para tener 
+						experiencia al momento de trabajar como back-end o full-stack.
+
+*/

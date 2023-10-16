@@ -11,7 +11,7 @@ const CardHabilidades = ({side, icons}:any) => {
 								{side}
 							</h1>
 			    <div 
-						className="py-10 flex flex-row gap-5 md:gap-10 flex-wrap p-14 justify-center grid-center"
+						className="py-10 flex flex-row font-light gap-5 md:gap-10 flex-wrap p-14 justify-center grid-center"
 						>
 			      {
 							icons.map((ico:any, index:number) => {

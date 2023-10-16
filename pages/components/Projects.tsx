@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { useTranslation } from "react-i18next"
 
 const Projects = () => {
 	const project = [
@@ -7,7 +8,7 @@ const Projects = () => {
 			imagen: "/resources/projects/hardsoft.png",
 			ruta: "https://hardsoftsj.netlify.app",
 			name: "HardSoft",
-			desc: "Landing page de un servicio técnico de computadoras",
+			desc: "Home page of a computer technical service",
 			technologies: ["NextJS", "Tailwind CSS"],
 			code: "https://github.com/Mathi21as/HardSoft"
 		},
@@ -15,7 +16,7 @@ const Projects = () => {
 			imagen: "/resources/projects/sistemaalumnosfinal.png",
 			ruta: "#",
 			name: "Gestión de alumnos",
-			desc: "Página web de gestion de alumnos",
+			desc: "Student management website",
 			technologies: ["Thymeleaf", "Bootstrap 5", "Java", "Spring", "Spring Web", "Spring Boot", "Spring Data", "MySQL"],
 			code: "https://github.com/Mathi21as/SistemaCursos"
 		},
@@ -23,7 +24,7 @@ const Projects = () => {
 			imagen: "/resources/projects/fastnotes.png",
 			ruta: "https://fastnotesmr.netlify.app",
 			name: "FastNotes",
-			desc: "Aplicación web de notas y listas de items",
+			desc: "Notes and item lists web application",
 			technologies: ["ReactJS", "Bootstrap 5"],
 			code: "https://github.com/Mathi21as/FastNotes"
 		},
@@ -31,7 +32,7 @@ const Projects = () => {
 			imagen: "/resources/projects/portafolio.png",
 			ruta: "#",
 			name: "Portafolio",
-			desc: "Mi portafolio",
+			desc: "My portfolio",
 			technologies: ["NextJS", "Tailwind CSS"],
 			code: "https://github.com/Mathi21as/portafolio"
 		},
@@ -39,7 +40,7 @@ const Projects = () => {
 			imagen: "/resources/projects/encriptador.png",
 			ruta: "https://mathi21as.github.io/Encriptador-de-texto---Oracle/",
 			name: "Encriptador",
-			desc: "Challenge encriptador de texto realizado en el programa ONE",
+			desc: "Text encryption challenge carried out in the ONE program",
 			technologies: ["HTML5", "CSS3", "Javascript"],
 			code: "https://github.com/Mathi21as/Encriptador-de-texto---Oracle"
 		},
@@ -47,7 +48,7 @@ const Projects = () => {
 			imagen: "/resources/projects/hotelalura.png",
 			ruta: "#",
 			name: "Hotel Alura",
-			desc: "Challenge de registro de huespedes del Hotel Alura del programa ONE",
+			desc: "Alura Hotel guest registration challenge of the ONE program",
 			technologies: ["Java", "JPA/Hibernate", "MySQL"],
 			code: "https://github.com/Mathi21as/HotelAlura"
 		},
@@ -55,7 +56,7 @@ const Projects = () => {
 			imagen: "/resources/projects/conversor.png",
 			ruta: "#",
 			name: "Conversor",
-			desc: "Challenge conversor del programa ONE realizado con Java y Swing para la parte grafica",
+			desc: "Challenge converter of the ONE program made with Java and Swing for the graphic part",
 			technologies: ["Java", "Java Swing"],
 			code: "https://github.com/Mathi21as/ConversorAlura"
 		},
@@ -63,31 +64,32 @@ const Projects = () => {
 			imagen: "/resources/projects/weathernow.png",
 			ruta: "https://mathi21as.github.io/weathernow/",
 			name: "WeatherNow",
-			desc: "Página web para consultar el clima de una o varias ciudades",
+			desc: "Website to check the weather of one or more cities",
 			technologies: ["ReactJS", "Bootstrap 4"],
 			code: "https://github.com/Mathi21as/weathernow"
 		},
 	]
+	const {t} = useTranslation();
 
 	return(
-		<div className="grid grid-cols-1 md:grid-cols-3 w-full min-h-[calc(100vh-10vh)] mb-12 md:px-14 gap-4">
+		<div className="grid grid-cols-1 md:grid-cols-3 w-full min-h-[calc(100vh-10vh)] mb-12 md:px-14 gap-4 ">
 						{
 							project.map((project, index)=>{
 								return (
-									<div className=" bg-neutral-950/20 rounded-xl" key={index}>
+									<div className="bg-neutral-950/20 rounded-xl" key={index}>
 										<Link className="" href={`${project.ruta}`} target={`${project.ruta == "#" ? "" : "_blank"}`}>
-											<Image width={"800"} className="rounded-xl" height={"0"} src={`${project.imagen}`} alt="" />
+											<Image width={"800"} height={"0"} className="rounded-xl w-full h-44" src={`${project.imagen}`} alt="" />
 										</Link>
 										<div className="my-5 px-5">
 											<div className="flex justify-between">
 												<p className="text-2xl mb-2">{`${project.name}`}</p>
-												<Link href={project.code} target="_blank" className="text-md md:text-lg p-2 rounded-xl bg-green-500/50">{"</> Código"}</Link>
+												<Link href={project.code} target="_blank" className=" text-md md:text-sm p-2 font-light rounded-xl bg-green-500/50">{`</> ${t("Code")}`}</Link>
 											</div>
-											<p className="text-xl mt-2">{`${project.desc}`}</p>
-											<div className="flex gap-3 justify-end mt-4 flex-wrap">
+											<p className="text-xl font-light mt-2">{t(project.desc)}</p>
+											<div className="flex gap-3 justify-end align_bottom mt-4 flex-wrap">
 												{
 													project.technologies.map((technology, index) => {
-														return <p className="w-max bg-gray-800 rounded-xl py-1 px-2" key={index}>{technology}</p>
+														return <p className="w-max bg-gray-800 font-light rounded-xl py-1 px-2" key={index}>{technology}</p>
 													})
 												}
 											</div>

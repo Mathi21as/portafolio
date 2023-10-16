@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next"
 import CardHabilidades from "./CardHabilidades"
 
 const Habilidades = () => {
@@ -95,6 +96,7 @@ const Habilidades = () => {
 			</svg>]
 		]
 	]
+	const {t} = useTranslation();
 	return(
 			<section 
 				className='w-full mt-10 px-12 md:px-20 py-12 md:relative'
@@ -102,7 +104,7 @@ const Habilidades = () => {
 				<h3 
 					className='text-4xl md:text-5xl mb-12 w-max mx-auto md:mx-0'
 					>
-					Habilidades
+					{t("Skills")}
 				</h3>
 
 				<div className='w-full flex flex-col gap-16'>
