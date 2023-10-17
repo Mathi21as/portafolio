@@ -3,7 +3,7 @@ const CardHabilidades = ({side, icons}:any) => {
 		return(<></>)
 		
 	return(
-		<div className="mx-auto w-11/12 pt-5 bg-neutral-950/20">
+		<div className="mx-auto w-full md:w-11/12 pt-5 bg-neutral-950/20">
 			  <div className="">
 						<h1 
 							className='text-2xl md:text-3xl h-full justify-center text-white text-center'
@@ -16,7 +16,7 @@ const CardHabilidades = ({side, icons}:any) => {
 			      {
 							icons.map((ico:any, index:number) => {
 								return (
-									<div className="flex flex-col justify-center" key={index}>
+									<div className="flex flex-col basis-28 md:basis-20 justify-center" key={index}>
 										{ico[1]}
 										<p className="py-8 mx-auto md:text-xl">{ico[0]}</p>
 									</div>

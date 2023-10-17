@@ -77,7 +77,7 @@ export default function Home() {
 					>
 					<Image 
 						className='mx-auto h-max md:mx-10 mb-10 md:mb-0 rounded-xl'
-						src="/resources/foto.jpg"
+						src="/resources/fotopng.png"
 						alt='my photo' 
 						width={170} 
 						height={170}/>

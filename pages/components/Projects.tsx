@@ -83,7 +83,12 @@ const Projects = () => {
 										<div className="my-5 px-5">
 											<div className="flex justify-between">
 												<p className="text-2xl mb-2">{`${project.name}`}</p>
-												<Link href={project.code} target="_blank" className=" text-md md:text-sm p-2 font-light rounded-xl bg-green-500/50">{`</> ${t("Code")}`}</Link>
+												<Link 
+													href={project.code} 
+													target="_blank" 
+													className=" text-md md:text-sm whitespace-nowrap p-2 h-min font-light rounded-xl bg-green-500/50">
+														{`</> ${t("Code")}`}
+												</Link>
 											</div>
 											<p className="text-xl font-light mt-2">{t(project.desc)}</p>
 											<div className="flex gap-3 justify-end align_bottom mt-4 flex-wrap">
