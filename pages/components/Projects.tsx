@@ -86,7 +86,7 @@ const Projects = () => {
 												<Link 
 													href={project.code} 
 													target="_blank" 
-													className=" text-md md:text-sm whitespace-nowrap p-2 h-min font-light rounded-xl bg-green-500/50">
+													className=" text-md md:text-sm md:hover:bg-green-500/70 whitespace-nowrap p-2 h-min font-light rounded-xl bg-green-500/50">
 														{`</> ${t("Code")}`}
 												</Link>
 											</div>

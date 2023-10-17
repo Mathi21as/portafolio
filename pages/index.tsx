@@ -11,6 +11,18 @@ import { useTranslation } from 'react-i18next'
 
 const inter:object = Inter({ subsets: ['latin'] })
 
+const handleMenu = () => {
+	let menu = document.querySelector('.hamburger') as HTMLElement;
+
+	const toggleMenu = (event:any) => {
+		let menuppal = document.querySelector( ".menuppal" ) as HTMLElement
+		menuppal.classList.toggle("is_active")
+  	event.preventDefault();
+	}
+
+	menu.addEventListener('click', toggleMenu);
+}
+
 export default function Home() {
 	const [language, setLanguage] = React.useState("es-ES")
 
@@ -25,6 +37,7 @@ export default function Home() {
 		setLanguage("es-ES")
 		}
 	}
+
   return (
     <>
       <Head>
@@ -33,42 +46,92 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" /> 
         <link rel="icon" href="/favicon.ico" />
       </Head>
+			<nav className='md:hidden fixed top-0 md:bottom-0 md:right-0 h-14 w-full 
+					w-full bg-neutral-950/90 flex flex-row justify-center 
+					text-sm md:text-lg z-10 md:[&>*]:scale-90'>
+				<div className="hamburger" onClick={()=>handleMenu()}>
+					<div className="_layer -top"></div>
+					<div className="_layer -mid"></div>
+					<div className="_layer -bottom"></div>
+				</div>
+				<nav className="menuppal bg-neutral-950/90">
+					<ul>
+						<li>
+							<a 
+								href="#sobremi"
+								className='w-max mx-auto md:my-3 my-auto'>
+								{t("About me")}
+							</a>
+						</li>
+						<li>
+							<a 
+								href="#habilidades"
+								className='w-max mx-auto md:my-3 my-auto'>
+								{t("Skills")}
+							</a>
+						</li>
+						<li>
+							<a 
+								href="#proyectos"
+								className='w-max mx-auto md:my-3 my-auto'>
+								{t("Projects")}
+							</a>
+						</li>
+						<li>
+							<button 
+								onClick={()=>handleChangeLanguage()}
+								className='w-max mx-auto md:my-3 my-auto'>
+								{t("Change language")}
+							</button>
+						</li>
+						<li>
+							<a 
+								href="#contacto"
+								className='w-max mx-auto md:my-3 my-auto'>
+								{t("Contact")}
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<h1 className="text-2xl my-auto">Portafolio</h1>
+			</nav>
 			<nav 
 					className='fixed top-0 md:bottom-0 md:right-0 h-14 w-full 
-					w-full bg-neutral-950/90 flex flex-row justify-center 
+					w-full bg-neutral-950/90 hidden md:flex md:flex-row justify-center 
 					text-sm md:text-lg z-10 md:[&>*]:scale-90'
 					>
 					<a 
 						href="#sobremi"
-						className='w-max mx-auto md:my-3 my-auto'
+						className='w-max mx-auto md:my-3 my-auto hover:text-slate-500'
 						>
 						{t("About me")}
 					</a>
 					<a 
 						href="#habilidades" 
-						className='w-max mx-auto md:my-3 my-auto'
+						className='w-max mx-auto md:my-3 my-auto hover:text-slate-500'
 						> 
 						{t("Skills")}
 					</a>
 					<a 
 						href="#proyectos" 
-						className='w-max mx-auto md:my-3 my-auto'
+						className='w-max mx-auto md:my-3 my-auto hover:text-slate-500'
 						>
 						{t("Projects")}
 					</a>
 					<button 
 						onClick={()=>handleChangeLanguage()}
-						className='w-max mx-auto md:my-3 my-auto'
+						className='w-max mx-auto md:my-3 my-auto hover:text-slate-500'
 						>
 						{t("Change language")}
 					</button>
 					<a 
 						href="#contacto" 
-						className='w-max mx-auto md:my-3 my-auto'
+						className='w-max mx-auto md:my-3 my-auto hover:text-slate-500'
 						>
 						{t("Contact")}
 					</a>
 			</nav>
+
       <main 
 				className="w-full"
 				>
