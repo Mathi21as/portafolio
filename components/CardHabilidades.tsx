@@ -11,14 +11,14 @@ const CardHabilidades = ({side, icons}:any) => {
 								{side}
 							</h1>
 			    <div 
-						className="py-10 flex flex-row font-light gap-5 md:gap-10 flex-wrap p-14 justify-center grid-center"
+						className="py-10 flex flex-row font-light gap-5 md:gap-10 flex-wrap p-12 justify-center grid-center"
 						>
 			      {
 							icons.map((ico:any, index:number) => {
 								return (
 									<div className="flex flex-col basis-28 md:basis-20 justify-center" key={index}>
 										{ico[1]}
-										<p className="py-8 mx-auto md:text-xl">{ico[0]}</p>
+										<p className="py-8 mx-auto md:text-xl whitespace-nowrap">{ico[0]}</p>
 									</div>
 								)
 							})
