@@ -46,6 +46,7 @@ const resources = {
 			"Alura Hotel guest registration challenge of the ONE program": "Desafío de registro de huespedes del Hotel Alura del programa ONE",
 			"Challenge converter of the ONE program made with Java and Swing for the graphic part": "Desafío conversor del programa ONE realizado con Java y Swing para la parte gráfica",
 			"Website to check the weather of one or more cities": "Página web para consultar el clima de una o varias ciudades",
+			"Management system of an academy carried out as a team at the JAM 2023 of San Juan Tec.": "Sistema de gestion de una academia realizado en equipo en la JAM 2023 de San Juan Tec.",
 			"Developed by": "Desarrollado por",
 		}
   }
