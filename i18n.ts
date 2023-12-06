@@ -5,7 +5,7 @@ import { initReactI18next } from "react-i18next";
 // (tip move them in a JSON file and import them,
 // or even better, manage them separated from your code: https://react.i18next.com/guides/multiple-translation-files)
 const resources = {
-  es: {
+  en: {
     translation: {
 			"About me": "Sobre mí",
 			"Projects": "Proyectos",
@@ -13,10 +13,14 @@ const resources = {
 			"Change language": "Cambiar idioma",
 			"Contact": "Contacto",
 			"Full-Stack Developer": "Desarrollador Full-Stack",
-			"I am passionate about web development and have solid \
-			experience and skills in the front-end field. A few years \
+			"I am a curious and proactive fullstack web developer with \
+			although with more affinity for the backend.": 
+			"Soy un curioso y proactivo desarrollador web fullstack, \
+			aunque con más afinidad por el backend.",
+			"Download CV": "Descargar CV",
+			"A few years \
 			ago, I entered the world of programming as a self-taught \
-			person and have been perfecting my knowledge in this area. \
+			person and have been perfecting my knowledge in the area of ​​web development. \
 			Although I have the necessary foundation to work as a front-end \
 			developer, I feel a greater affinity for logic and programming \
 			than for design. For this reason, I decided to embark on a training \
@@ -25,10 +29,9 @@ const resources = {
 			for a career as a back-end or full-stack developer, as I am convinced \
 			that my passion and skills in programming will lead me to achieve \
 			my goals in this area.": 
-			"Soy un apasionado del desarrollo web y cuento con experiencia y \
-			habilidades sólidas en el ámbito del front-end. Hace algunos años, \
+			"Hace algunos años, \
 			me adentré en el mundo de la programación de forma autodidacta y he \
-			ido perfeccionando mis conocimientos en esta área. A pesar de que \
+			ido perfeccionando mis conocimientos en el área de desarrollo web. A pesar de que \
 			tengo la base necesaria para desempeñarme como desarrollador front-end, \
 			siento una mayor afinidad por la lógica y la programación que por el \
 			diseño. Por este motivo, decidí embarcarme en un proceso de formación \

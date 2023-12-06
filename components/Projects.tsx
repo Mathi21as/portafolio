@@ -80,7 +80,7 @@ const Projects = () => {
 	const {t} = useTranslation();
 
 	return(
-		<div className="grid grid-cols-1 md:grid-cols-3 w-full min-h-[calc(100vh-10vh)] mb-12 md:px-14 gap-4 ">
+		<div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 w-full min-h-[calc(100vh-10vh)] mb-12 lg:px-14 gap-4 ">
 			{
 				project.map((project, index)=>{
 					return (
@@ -94,7 +94,7 @@ const Projects = () => {
 									<Link 
 										href={project.code} 
 										target="_blank" 
-										className=" text-md md:text-sm md:hover:bg-green-500/70 whitespace-nowrap 
+										className=" text-lg lg:text-sm lg:hover:bg-green-500/70 whitespace-nowrap 
 										p-2 h-min font-light rounded-xl bg-green-500/50">
 											{`</> ${t("Code")}`}
 									</Link>

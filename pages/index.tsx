@@ -6,6 +6,7 @@ import Projects from '../components/Projects'
 import Habilidades from '../components/Habilidades'
 import React from 'react'
 import Nav from '../components/Nav/Nav'
+import i18n from "@/i18n";
 import { useTranslation } from 'react-i18next'
 
 
@@ -22,50 +23,60 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" /> 
         <link rel="icon" href="/favicon.ico" />
       </Head>
-			<Nav  setLanguage={setLanguage}/>
+			<Nav setLanguage={setLanguage}/>
 
       <main 
-				className="w-full"
-				>
+		className="w-full"
+		>
         <div 
-					className='flex flex-col md:flex-row w-full md:px-20 justify-center pt-56'
-					>
-					<Image 
-						className='mx-auto h-max md:mx-10 mb-10 md:mb-0 rounded-xl'
-						src="/resources/fotopng.png"
-						alt='my photo' 
-						width={170} 
-						height={170}/>
-					<div className="flex flex-col grow md:h-max md:flex-col">
-						<h1 
-							className='mx-auto ml-5 w-full md:mr-20 md:ml-10 h-full md:pr-16 h-max
-							md:pr-40 w-max text-5xl md:text-7xl opacity-80'
-							>
-							Mathias Ledesma
-						</h1>
-						<h2 
-							className='overflow-hidden whitespace-nowrap border-r-4 mt-6 md:mt-8 w-max opacity-80
-								border-blue-500 w-0 m-0 m-auto animate-typing_mobile md:animate-typing text-4xl md:text-5xl'
-							>
-							{t("Full-Stack Developer")}
-						</h2>
-					</div>
+			className='flex flex-col lg:flex-row w-full lg:px-10 justify-center'
+			>
+			
+			<div className="flex flex-row lg:flex-col mt-56 grow lg:h-max">
+				<div className='w-full'>
+					<h1 
+						className='mx-auto lg:ml-5 lg:mr-20 lg:ml-10 h-full lg:pr-16 h-max
+							lg:pr-40 w-max text-4xl lg:text-5xl opacity-80'>
+						Mathias Ledesma
+					</h1>
+					<h2 
+						className={`mx-auto overflow-hidden whitespace-nowrap border-r-4 mt-2 lg:mt-3 
+						opacity-80 border-blue-500 w-0 m-0 lg:ml-32 text-2xl lg:text-3xl 
+						${i18n.language == "es-ES" ? 
+							"animate-typing_mobile_en lg:animate-typing_en" 
+							: 
+							"animate-typing_mobile lg:animate-typing"}`}>
+						{t("Full-Stack Developer")}
+					</h2>
 				</div>
-				<section 
-					className='h-max w-full flex flex-col 
-						mt-10 px-12 md:px-20 py-12 md:relative'
-					>
-					<a id="sobremi"></a>
-					<h3 
-						className='text-4xl md:text-5xl md:mt-20 mx-auto md:mx-0'
-						>
-						{t("About me")}
-					</h3>
-					<p className='mt-12 md:mt-10 text-xl md:text-2xl font-light mx-auto'>
-						{t("I am passionate about web development and have solid \
-			experience and skills in the front-end field. A few years \
+			</div>
+			<div className="flex flex-col mt-14 lg:mt-56 grow lg:h-max">
+				<p className='text-xl lg:text-2xl font-light mx-auto px-12'>
+				{t("I am a curious and proactive fullstack web developer with \
+			although with more affinity for the backend.")}
+				</p>
+				<a 
+					className="mx-auto mt-10 bg-blue-950/90 hover:bg-blue-900 
+						text-white font-bold py-2 px-4 rounded" 
+					href="/resources/cv.pdf">
+					{t("Download CV")}
+				</a>
+			</div>
+		</div>
+		<section 
+			className='h-max w-full flex flex-col 
+				mt-10 px-12 lg:px-20 py-12 lg:relative'
+			>
+			<a id="sobremi"></a>
+			<h3 
+				className='text-4xl lg:text-5xl lg:mt-20 mx-auto lg:mx-0'
+				>
+				{t("About me")}
+			</h3>
+			<p className='mt-12 lg:mt-10 text-xl lg:text-2xl font-light mx-auto'>
+				{t("A few years \
 			ago, I entered the world of programming as a self-taught \
-			person and have been perfecting my knowledge in this area. \
+			person and have been perfecting my knowledge in the area of ​​web development. \
 			Although I have the necessary foundation to work as a front-end \
 			developer, I feel a greater affinity for logic and programming \
 			than for design. For this reason, I decided to embark on a training \
@@ -74,38 +85,25 @@ export default function Home() {
 			for a career as a back-end or full-stack developer, as I am convinced \
 			that my passion and skills in programming will lead me to achieve \
 			my goals in this area.")}
-					</p>
-				</section>
-				<a id="habilidades"></a>
-				<Habilidades />
-				<a id="proyectos"></a>
-				<section 
-					className='m-h-screen90 w-full my-10 px-12 md:px-20 
-					py-12 md:relative'
-					>
-					<h3
-						className='text-4xl md:text-5xl mb-16 mx-auto w-max md:mx-0'
-					>
-						{t("Projects")}
-					</h3>
-					<Projects />
-				</section>
-				<a id="contacto"></a>
-				<Footer />
+			</p>
+		</section>
+		<a id="habilidades"></a>
+		<Habilidades />
+		<a id="proyectos"></a>
+		<section 
+			className='m-h-screen90 w-full mt-10 mb-0 px-12 lg:px-20 
+			py-12 lg:relative'
+			>
+			<h3
+				className='text-4xl lg:text-5xl mb-16 mx-auto w-max lg:mx-0'
+			>
+				{t("Projects")}
+			</h3>
+			<Projects />
+		</section>
+		<a id="contacto"></a>
+		<Footer />
       </main>
     </>
   )
 }
-
-/*
-
-Soy un apasionado del desarrollo web en 
-						el cual tengo conocimientos y experiencia en el campo del front-end. 
-						Hace unos años descubrí la programación y estudie de manera 
-						autodidacta adquiriendo habilidades en esta área. Aunque tengo los 
-						conocimientos para ser un desarrollador front-end, me gusta más la 
-						lógica que el diseño, por lo que decidí comenzar a estudiar temas 
-						relacionados al área de back-end y realizar proyectos para tener 
-						experiencia al momento de trabajar como back-end o full-stack.
-
-*/

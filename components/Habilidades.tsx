@@ -99,10 +99,10 @@ const Habilidades = () => {
 	const {t} = useTranslation();
 	return(
 			<section 
-				className='w-full mt-10 px-12 md:px-20 py-12 md:relative'
+				className='w-full mt-10 px-12 lg:px-20 py-12 lg:relative'
 				>
 				<h3 
-					className='text-4xl md:text-5xl mb-12 w-max mx-auto md:mx-0'
+					className='text-4xl lg:text-5xl mb-12 w-max mx-auto lg:mx-0'
 					>
 					{t("Skills")}
 				</h3>
