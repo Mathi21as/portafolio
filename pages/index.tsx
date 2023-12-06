@@ -73,7 +73,7 @@ export default function Home() {
 				>
 				{t("About me")}
 			</h3>
-			<p className='mt-12 lg:mt-10 text-xl lg:text-2xl font-light mx-auto'>
+			<p className='mt-12 lg:mt-10 text-xl lg:text-2xl font-light mx-auto text-justify'>
 				{t("A few years \
 			ago, I entered the world of programming as a self-taught \
 			person and have been perfecting my knowledge in the area of ​​web development. \
