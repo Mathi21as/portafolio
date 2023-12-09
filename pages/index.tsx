@@ -8,6 +8,7 @@ import React from 'react'
 import Nav from '../components/Nav/Nav'
 import i18n from "@/i18n";
 import { useTranslation } from 'react-i18next'
+import ContactForm from '@/components/ContactForm'
 
 
 const inter:object = Inter({ subsets: ['latin'] })
@@ -15,6 +16,7 @@ const inter:object = Inter({ subsets: ['latin'] })
 export default function Home() {
 	const [language, setLanguage] = React.useState("es-ES")
 	const {t} = useTranslation();
+	
   return (
     <>
       <Head>
@@ -102,6 +104,16 @@ export default function Home() {
 			<Projects />
 		</section>
 		<a id="contacto"></a>
+		<section 
+			className='m-h-screen90 mt-0 mb-20 px-12 lg:px-20 py-12 lg:relative flex flex-col gap-10 
+			text-center lg:text-start lg:flex-row items-center bg-neutral-950/20'
+			>
+			<div className='w-full flex flex-col gap-2'>
+				<h5 className='mx-auto w-fit text-2xl'>{t("Do you need to create or improve your website?")}</h5>
+				<p className='mx-auto w-fit'>{t("Complete the form to contact me.")}</p>
+			</div>
+			<ContactForm />
+		</section>
 		<Footer />
       </main>
     </>
