@@ -9,14 +9,16 @@ import Nav from '../components/Nav/Nav'
 import i18n from "@/i18n";
 import { useTranslation } from 'react-i18next'
 import ContactForm from '@/components/ContactForm'
+import { sendEmail } from '@/services/emailjs'
 
 
 const inter:object = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 	const [language, setLanguage] = React.useState("es-ES")
+	//evalua si se oprimio el boton enviar del formulario de contacto
+	const [emailSend, setEmailSend] = React.useState(false)
 	const {t} = useTranslation();
-	
   return (
     <>
       <Head>
@@ -112,7 +114,7 @@ export default function Home() {
 				<h5 className='mx-auto w-fit text-2xl'>{t("Do you need to create or improve your website?")}</h5>
 				<p className='mx-auto w-fit'>{t("Complete the form to contact me.")}</p>
 			</div>
-			<ContactForm />
+			<ContactForm setEmailSend={setEmailSend} emailSend={emailSend}/>
 		</section>
 		<Footer />
       </main>

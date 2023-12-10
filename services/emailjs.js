@@ -4,7 +4,6 @@ import emailjs from '@emailjs/browser'
 function sendEmail (e) {
     e.preventDefault();
     const form = document.getElementById("contact_form")
-    console.log(form.from_name.value);
     const data = {
         from_name: form.from_name.value,
         from_lastname: form.from_lastname.value,
@@ -12,7 +11,10 @@ function sendEmail (e) {
         message: form.message.value,
         client_email: form.client_email.value,
     }
-    emailjs.send(process.env.SERVICE_ID, process.env.TEMPLATE_ID, data, process.env.PUBLIC_KEY)
+    emailjs.send(process.env.NEXT_PUBLIC_SERVICE_ID, 
+        process.env.NEXT_PUBLIC_TEMPLATE_ID, 
+        data, 
+        process.env.NEXT_PUBLIC_PUBLIC_KEY)
 }
 
 export {sendEmail}
