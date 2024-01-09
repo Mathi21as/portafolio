@@ -8,7 +8,7 @@ const ContactForm = ({setEmailSend, emailSend}:any) => {
 
     return(
         <form 
-            className="w-full flex flex-col gap-5 text-start"
+            className="w-full flex flex-col gap-5 text-start lg:w-max"
             id="contact_form" 
             onSubmit={(e)=>{sendEmail(e); setEmailSend(true)}}>
             <div className="flex flex-col lg:flex-row gap-5">

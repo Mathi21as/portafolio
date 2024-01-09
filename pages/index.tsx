@@ -36,16 +36,16 @@ export default function Home() {
 			className='flex flex-col lg:flex-row w-full lg:px-10 justify-center'
 			>
 			
-			<div className="flex flex-row lg:flex-col mt-56 grow lg:h-max">
+			<div className="flex flex-col lg:flex-col mt-56 grow lg:h-max">
 				<div className='w-full'>
 					<h1 
-						className='mx-auto lg:ml-5 lg:mr-20 lg:ml-10 h-full lg:pr-16 h-max
+						className='mx-auto h-full lg:pr-16 h-max mb-5
 							lg:pr-40 w-max text-4xl lg:text-5xl opacity-80'>
 						Mathias Ledesma
 					</h1>
 					<h2 
-						className={`mx-auto overflow-hidden whitespace-nowrap border-r-4 mt-2 lg:mt-3 
-						opacity-80 border-blue-500 w-0 m-0 lg:ml-32 text-2xl lg:text-3xl 
+						className={`mx-auto overflow-hidden whitespace-nowrap border-r-4 mt-2 
+						opacity-80 border-blue-500 w-0 m-0 text-2xl lg:text-3xl 
 						${i18n.language == "es-ES" ? 
 							"animate-typing_mobile_en lg:animate-typing_en" 
 							: 
@@ -53,19 +53,14 @@ export default function Home() {
 						{t("Full-Stack Developer")}
 					</h2>
 				</div>
-			</div>
-			<div className="flex flex-col mt-14 lg:mt-56 grow lg:h-max">
-				<p className='text-xl lg:text-2xl font-light mx-auto px-12'>
-				{t("I am a curious and proactive fullstack web developer with \
-			although with more affinity for the backend.")}
-				</p>
 				<a 
 					className="mx-auto mt-10 bg-blue-950/90 hover:bg-blue-900 
 						text-white font-bold py-2 px-4 rounded" 
 					href="/resources/cv.pdf">
-					{t("Download CV")}
+					{t("Download Resume")}
 				</a>
 			</div>
+			
 		</div>
 		<section 
 			className='h-max w-full flex flex-col 
@@ -73,7 +68,7 @@ export default function Home() {
 			>
 			<a id="sobremi"></a>
 			<h3 
-				className='text-4xl lg:text-5xl lg:mt-20 mx-auto lg:mx-0'
+				className='text-4xl text-stone-600 lg:text-5xl lg:mt-20 mx-auto lg:mx-0'
 				>
 				{t("About me")}
 			</h3>
@@ -99,7 +94,7 @@ export default function Home() {
 			py-12 lg:relative'
 			>
 			<h3
-				className='text-4xl lg:text-5xl mb-16 mx-auto w-max lg:mx-0'
+				className='text-4xl text-stone-600 lg:text-5xl mb-16 mx-auto w-max lg:mx-0'
 			>
 				{t("Projects")}
 			</h3>
@@ -108,11 +103,10 @@ export default function Home() {
 		<a id="contacto"></a>
 		<section 
 			className='m-h-screen90 mt-0 mb-20 px-12 lg:px-20 py-12 lg:relative flex flex-col gap-10 
-			text-center lg:text-start lg:flex-row items-center bg-neutral-950/20'
+			text-center lg:text-start lg:flex-col lg:w-4/6 mx-auto items-center bg-neutral-950/20'
 			>
 			<div className='w-full flex flex-col gap-2'>
-				<h5 className='mx-auto w-fit text-2xl'>{t("Do you need to create or improve your website?")}</h5>
-				<p className='mx-auto w-fit'>{t("Complete the form to contact me.")}</p>
+				<h5 className='mx-auto w-fit text-2xl'>{t("Complete the form to contact me.")}</h5>
 			</div>
 			<ContactForm setEmailSend={setEmailSend} emailSend={emailSend}/>
 		</section>

@@ -17,7 +17,7 @@ const resources = {
 			although with more affinity for the backend.": 
 			"Soy un curioso y proactivo desarrollador web fullstack, \
 			aunque con más afinidad por el backend.",
-			"Download CV": "Descargar CV",
+			"Download Resume": "Descargar CV",
 			"A few years \
 			ago, I entered the world of programming as a self-taught \
 			person and have been perfecting my knowledge in the area of ​​web development. \
@@ -40,17 +40,22 @@ const resources = {
 			carrera como desarrollador back-end o full-stack, ya que estoy convencido \
 			de que mi pasión y habilidades en la programación me llevarán a alcanzar \
 			mis metas en esta área.",
-			"Code": "Código",
 			"Home page of a computer technical service": "Página principal de un servicio técnico de computadoras",
+			"Student management": "Gestión de alumnos",
 			"Student management website": "Página web de gestion de alumnos",
 			"Notes and item lists web application": "Aplicación web de notas y listas de items",
+			"Portfolio": "Portafolio",
 			"My portfolio": "Mi portafolio",
+			"Encryptor": "Encriptador",
+			"Alura Hotel": "Hotel Alura",
 			"Text encryption challenge carried out in the ONE program": "Desafío encriptador de texto realizado en el programa ONE",
 			"Alura Hotel guest registration challenge of the ONE program": "Desafío de registro de huespedes del Hotel Alura del programa ONE",
+			"Converter": "Conversor",
 			"Challenge converter of the ONE program made with Java and Swing for the graphic part": "Desafío conversor del programa ONE realizado con Java y Swing para la parte gráfica",
 			"Website to check the weather of one or more cities": "Página web para consultar el clima de una o varias ciudades",
 			"Management system of an academy carried out as a team at the JAM 2023 of San Juan Tec.": "Sistema de gestion de una academia realizado en equipo en la JAM 2023 de San Juan Tec.",
-			"Do you need to create or improve your website?": "Necesitas crear o mejorar tu pagina web?",
+			"Web page": "Página web",
+			"Desktop": "Escritorio",
 			"Complete the form to contact me.": "Completa el formulario para ponerte en contacto conmigo.",
 			"Name": "Nombre",
 			"Lastname": "Apellido",

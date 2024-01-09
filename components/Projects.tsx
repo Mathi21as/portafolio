@@ -8,6 +8,7 @@ const Projects = () => {
 			imagen: "/resources/projects/hardsoft.png",
 			ruta: "https://hardsoftsj.netlify.app",
 			name: "HardSoft",
+			type: "webpage",
 			desc: "Home page of a computer technical service",
 			technologies: ["NextJS", "Tailwind CSS"],
 			code: "https://github.com/Mathi21as/HardSoft"
@@ -15,7 +16,8 @@ const Projects = () => {
 		{
 			imagen: "/resources/projects/sistemaalumnosfinal.png",
 			ruta: "#",
-			name: "Gestión de alumnos",
+			name: "Student management",
+			type: "webpage",
 			desc: "Student management website",
 			technologies: ["Thymeleaf", "Bootstrap 5", "Java", "Spring", "Spring Web", "Spring Boot", "Spring Data", "MySQL"],
 			code: "https://github.com/Mathi21as/SistemaCursos"
@@ -24,6 +26,7 @@ const Projects = () => {
 			imagen: "/resources/projects/fastnotes.png",
 			ruta: "https://fastnotesmr.netlify.app",
 			name: "FastNotes",
+			type: "webpage",
 			desc: "Notes and item lists web application",
 			technologies: ["ReactJS", "Bootstrap 5"],
 			code: "https://github.com/Mathi21as/FastNotes"
@@ -31,7 +34,8 @@ const Projects = () => {
 		{
 			imagen: "/resources/projects/portafolio.png",
 			ruta: "#",
-			name: "Portafolio",
+			name: "Portfolio",
+			type: "webpage",
 			desc: "My portfolio",
 			technologies: ["NextJS", "Tailwind CSS"],
 			code: "https://github.com/Mathi21as/portafolio"
@@ -39,7 +43,8 @@ const Projects = () => {
 		{
 			imagen: "/resources/projects/encriptador.png",
 			ruta: "https://mathi21as.github.io/Encriptador-de-texto---Oracle/",
-			name: "Encriptador",
+			name: "Encryptor",
+			type: "webpage",
 			desc: "Text encryption challenge carried out in the ONE program",
 			technologies: ["HTML5", "CSS3", "Javascript"],
 			code: "https://github.com/Mathi21as/Encriptador-de-texto---Oracle"
@@ -47,7 +52,8 @@ const Projects = () => {
 		{
 			imagen: "/resources/projects/hotelalura.png",
 			ruta: "#",
-			name: "Hotel Alura",
+			name: "Alura Hotel",
+			type: "desktop app",
 			desc: "Alura Hotel guest registration challenge of the ONE program",
 			technologies: ["Java", "JPA/Hibernate", "MySQL"],
 			code: "https://github.com/Mathi21as/HotelAlura"
@@ -55,7 +61,8 @@ const Projects = () => {
 		{
 			imagen: "/resources/projects/conversor.png",
 			ruta: "#",
-			name: "Conversor",
+			name: "Converter",
+			type: "desktop app",
 			desc: "Challenge converter of the ONE program made with Java and Swing for the graphic part",
 			technologies: ["Java", "Java Swing"],
 			code: "https://github.com/Mathi21as/ConversorAlura"
@@ -64,6 +71,7 @@ const Projects = () => {
 			imagen: "/resources/projects/weathernow.png",
 			ruta: "https://mathi21as.github.io/weathernow/",
 			name: "WeatherNow",
+			type: "webpage",
 			desc: "Website to check the weather of one or more cities",
 			technologies: ["ReactJS", "Bootstrap 4"],
 			code: "https://github.com/Mathi21as/weathernow"
@@ -72,6 +80,7 @@ const Projects = () => {
 			imagen: "/resources/projects/academia_jam2023.png",
 			ruta: "#",
 			name: "Academia JAM",
+			type: "webpage",
 			desc: "Management system of an academy carried out as a team at the JAM 2023 of San Juan Tec.",
 			technologies: ["Jinja2", "Flask", "Python", "MySQL", "Bootstrap", "HTML5", "CSS3"],
 			code: "https://github.com/DavidCosta92/academia_sj_tec_JAM23/tree/mathias"
@@ -80,27 +89,48 @@ const Projects = () => {
 	const {t} = useTranslation();
 
 	return(
-		<div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 w-full min-h-[calc(100vh-10vh)] mb-12 lg:px-14 gap-4 ">
+		<div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 w-full min-h-[calc(100vh-10vh)]
+			 mb-12 lg:px-14 gap-4 ">
 			{
 				project.map((project, index)=>{
 					return (
 						<div className="bg-neutral-950/20 rounded-xl" key={index}>
-							<Link className="" href={`${project.ruta}`} target={`${project.ruta == "#" ? "" : "_blank"}`}>
-								<Image width={"800"} height={"0"} className="rounded-xl w-full h-44" src={`${project.imagen}`} alt="" />
-							</Link>
-							<div className="my-5 px-5">
-								<div className="flex justify-between">
-									<p className="text-2xl mb-2">{`${project.name}`}</p>
+							<div className="my-5 px-5 flex flex-col gap-3">
+								<div className="flex flex-col gap-5 justify-center">
+									<p className="text-2xl mb-2 w-max mx-auto">{`${t(project.name)}`}</p>
+									<div className="flex justify-center gap-5">
+									<Link 
+										href={project.ruta} 
+										target="_blank" 
+										className={`${project.type == "webpage" ? "bg-blue-950/90 lg:hover:bg-blue-900/90" : 
+											"bg-blue-950/50 pointer-events-none"} text-lg lg:text-sm whitespace-nowrap 
+											p-2 h-min font-light rounded-xl flex flex-row gap-2`}>
+											<Image 
+												width={"20"} 
+												height={"20"} 
+												src={project.type == "webpage" ? "/resources/redes/webpage.ico"
+													: "/resources/redes/desktop.ico"} 
+												className="invert py-1" 
+												alt="web page"/>
+											{
+												project.type == "webpage" ?
+													<p className="text-lg lg:text-sm lg:pt-1">{`${t("Web page")}`}</p>
+													:
+													<p className="text-lg lg:text-sm lg:pt-1">{`${t("Desktop")}`}</p>
+											}
+									</Link>
 									<Link 
 										href={project.code} 
 										target="_blank" 
-										className=" text-lg lg:text-sm lg:hover:bg-green-500/70 whitespace-nowrap 
-										p-2 h-min font-light rounded-xl bg-green-500/50">
-											{`</> ${t("Code")}`}
+										className=" lg:hover:bg-blue-900/90 whitespace-nowrap 
+										p-2 h-min font-light rounded-xl bg-blue-950/90 flex flex-row gap-2">
+											<Image width={"20"} height={"20"} src={"/resources/redes/github.png"} className="invert py-1" alt="github"/>
+											<p className="text-lg lg:text-sm lg:pt-1">GitHub</p>
 									</Link>
+									</div>
 								</div>
 								<p className="text-xl font-light mt-2">{t(project.desc)}</p>
-								<div className="flex gap-3 justify-end align_bottom mt-4 flex-wrap">
+								<div className="flex gap-3 align_bottom mt-4 flex-wrap">
 									{
 										project.technologies.map((technology, index) => {
 											return <p className="w-max bg-gray-800 font-light rounded-xl py-1 px-2" key={index}>{technology}</p>
