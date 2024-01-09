@@ -108,8 +108,8 @@ const Projects = () => {
 											<Image 
 												width={"20"} 
 												height={"20"} 
-												src={project.type == "webpage" ? "/resources/redes/webpage.ico"
-													: "/resources/redes/desktop.ico"} 
+												src={project.type == "webpage" ? "/resources/redes/webpage.svg"
+													: "/resources/redes/desktop.svg"} 
 												className="invert py-1" 
 												alt="web page"/>
 											{
