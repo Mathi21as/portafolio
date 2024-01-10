@@ -94,49 +94,47 @@ const Projects = () => {
 			{
 				project.map((project, index)=>{
 					return (
-						<div className="bg-neutral-950/20 rounded-xl" key={index}>
-							<div className="my-5 px-5 flex flex-col gap-3">
-								<div className="flex flex-col gap-5 justify-center">
-									<p className="text-2xl mb-2 w-max mx-auto">{`${t(project.name)}`}</p>
-									<div className="flex justify-center gap-5">
-									<Link 
-										href={project.ruta} 
-										target="_blank" 
-										className={`${project.type == "webpage" ? "bg-blue-950/90 lg:hover:bg-blue-900/90" : 
-											"bg-blue-950/50 pointer-events-none"} text-lg lg:text-sm whitespace-nowrap 
-											p-2 h-min font-light rounded-xl flex flex-row gap-2`}>
-											<Image 
-												width={"20"} 
-												height={"20"} 
-												src={project.type == "webpage" ? "/resources/redes/webpage.svg"
-													: "/resources/redes/desktop.svg"} 
-												className="invert py-1" 
-												alt="web page"/>
-											{
-												project.type == "webpage" ?
-													<p className="text-lg lg:text-sm lg:pt-1">{`${t("Web page")}`}</p>
-													:
-													<p className="text-lg lg:text-sm lg:pt-1">{`${t("Desktop")}`}</p>
-											}
-									</Link>
-									<Link 
-										href={project.code} 
-										target="_blank" 
-										className=" lg:hover:bg-blue-900/90 whitespace-nowrap 
-										p-2 h-min font-light rounded-xl bg-blue-950/90 flex flex-row gap-2">
-											<Image width={"20"} height={"20"} src={"/resources/redes/github.png"} className="invert py-1" alt="github"/>
-											<p className="text-lg lg:text-sm lg:pt-1">GitHub</p>
-									</Link>
-									</div>
-								</div>
-								<p className="text-xl font-light mt-2">{t(project.desc)}</p>
-								<div className="flex gap-3 align_bottom mt-4 flex-wrap">
+						<div className="bg-neutral-950/20 rounded-xl py-8" key={index}>
+							<div className="px-6 flex flex-col gap-5 h-full">
+								<p className="text-2xl w-max mx-auto">{`${t(project.name)}`}</p>
+								<p className="text-xl font-light">{t(project.desc)}</p>
+								<div className="flex gap-3 align_bottom mt-3 flex-wrap">
 									{
 										project.technologies.map((technology, index) => {
 											return <p className="w-max bg-gray-800 font-light rounded-xl py-1 px-2" key={index}>{technology}</p>
 										})
 									}
 								</div>
+								<div className="flex flex-row justify-center gap-5 h-full items-end mt-3">
+										<Link 
+											href={project.ruta} 
+											target="_blank" 
+											className={`${project.type == "webpage" ? "bg-blue-950/90 lg:hover:bg-blue-900/90" : 
+												"bg-blue-950/50 pointer-events-none"} text-lg lg:text-sm whitespace-nowrap 
+												p-2 h-min font-light rounded-xl flex flex-row gap-2`}>
+												<Image 
+													width={"20"} 
+													height={"20"} 
+													src={project.type == "webpage" ? "/resources/redes/webpage.svg"
+														: "/resources/redes/desktop.svg"} 
+													className="invert py-1" 
+													alt="web page"/>
+												{
+													project.type == "webpage" ?
+														<p className="text-lg lg:text-sm lg:pt-1">{`${t("Web page")}`}</p>
+														:
+														<p className="text-lg lg:text-sm lg:pt-1">{`${t("Desktop")}`}</p>
+												}
+										</Link>
+										<Link 
+											href={project.code} 
+											target="_blank" 
+											className=" lg:hover:bg-blue-900/90 whitespace-nowrap 
+											p-2 h-min font-light rounded-xl bg-blue-950/90 flex flex-row gap-2">
+												<Image width={"20"} height={"20"} src={"/resources/redes/github.png"} className="invert py-1" alt="github"/>
+												<p className="text-lg lg:text-sm lg:pt-1">GitHub</p>
+										</Link>
+									</div>
 							</div>
 						</div>
 					)

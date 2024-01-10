@@ -10,7 +10,7 @@ const resources = {
 			"About me": "Sobre mí",
 			"Projects": "Proyectos",
 			"Skills": "Habilidades",
-			"Change language": "Cambiar idioma",
+			"🇺🇸 English": "🇪🇸 Español",
 			"Contact": "Contacto",
 			"Full-Stack Developer": "Desarrollador Full-Stack",
 			"I am a curious and proactive fullstack web developer with \
