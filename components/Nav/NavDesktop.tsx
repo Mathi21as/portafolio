@@ -43,7 +43,7 @@ const NavDesktop = ({setLanguage}:any) => {
 						onClick={()=>handleChangeLanguage()}
 						className='w-max mx-auto md:my-3 my-auto hover:text-slate-500'
 						>
-						{t("Change language")}
+						{t("🇺🇸 English")}
 					</button>
 					<a 
 						href="#contacto" 
