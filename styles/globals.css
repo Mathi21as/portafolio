@@ -193,6 +193,11 @@ a {
 }
 .menuppal ul li a{
   text-decoration:none;
+  display: inline-block;
+  width: 100%;
+}
+.menuppal ul li button{
+  width: 100%;
 }
 .menuppal ul li a:hover{
   text-decoration:none;

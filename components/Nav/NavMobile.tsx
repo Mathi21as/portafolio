@@ -37,15 +37,8 @@ const NavMobile = ({setLanguage}:any) => {
 					<div className="_layer -mid"></div>
 					<div className="_layer -bottom"></div>
 				</div>
-				<nav className="menuppal bg-neutral-950/90 h-screen">
+				<nav className="menuppal bg-neutral-950/90 h-screen w-full">
 					<ul className="px-5 pt-8">
-						<li>
-							<a 
-								href="#sobremi"
-								className='md:my-3 my-auto'>
-								{t("About me")}
-							</a>
-						</li>
 						<li>
 							<a 
 								href="#habilidades"
@@ -61,9 +54,16 @@ const NavMobile = ({setLanguage}:any) => {
 							</a>
 						</li>
 						<li>
+							<a 
+								href="#sobremi"
+								className='md:my-3 my-auto'>
+								{t("About me")}
+							</a>
+						</li>
+						<li className="fixed w-11/12 bottom-0">
 							<button 
 								onClick={()=>handleChangeLanguage()}
-								className='md:my-3'>
+								className='md:my-3 w-full text-start'>
 								{t("🇺🇸 English")}
 							</button>
 						</li>
