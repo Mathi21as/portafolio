@@ -90,14 +90,14 @@ const Projects = () => {
 
 	return(
 		<div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 w-full min-h-[calc(100vh-10vh)]
-			 mb-12 lg:px-14 gap-4 ">
+			 lg:px-14 gap-4 ">
 			{
 				project.map((project, index)=>{
 					return (
 						<div className="bg-neutral-950/20 rounded-xl py-8" key={index}>
 							<div className="px-6 flex flex-col gap-5 h-full">
 								<p className="text-2xl w-max mx-auto">{`${t(project.name)}`}</p>
-								<p className="text-xl font-light">{t(project.desc)}</p>
+								<p className="text-xl font-light  text-stone-400">{t(project.desc)}</p>
 								<div className="flex gap-3 align_bottom mt-3 flex-wrap">
 									{
 										project.technologies.map((technology, index) => {

@@ -99,15 +99,15 @@ const Habilidades = () => {
 	const {t} = useTranslation();
 	return(
 			<section 
-				className='w-full mt-10 px-12 lg:px-20 py-12 lg:relative'
+				className='w-full mt-20 px-12 lg:px-20 py-12 lg:relative'
 				>
 				<h3 
-					className='text-4xl text-stone-600 lg:text-5xl mb-12 w-max mx-auto lg:mx-0'
+					className='text-4xl lg:text-5xl mt-10 mb-12 w-max mx-auto lg:mx-0'
 					>
 					{t("Skills")}
 				</h3>
 
-				<div className='w-full flex flex-col gap-16'>
+				<div className='w-full flex flex-col text-stone-400 gap-16'>
 					{
 						icons.map((icon:any, index:number) => {
 							return <CardHabilidades side={index == 0 ? "Frontend" : "Backend"} key={index} icons={icon} />

@@ -22,12 +22,6 @@ const NavDesktop = ({setLanguage}:any) => {
 					text-sm md:text-lg z-10 md:[&>*]:scale-90'
 					>
 					<a 
-						href="#sobremi"
-						className='w-max mx-auto md:my-3 my-auto hover:text-slate-500'
-						>
-						{t("About me")}
-					</a>
-					<a 
 						href="#habilidades" 
 						className='w-max mx-auto md:my-3 my-auto hover:text-slate-500'
 						> 
@@ -38,6 +32,12 @@ const NavDesktop = ({setLanguage}:any) => {
 						className='w-max mx-auto md:my-3 my-auto hover:text-slate-500'
 						>
 						{t("Projects")}
+					</a>
+					<a 
+						href="#sobremi"
+						className='w-max mx-auto md:my-3 my-auto hover:text-slate-500'
+						>
+						{t("About me")}
 					</a>
 					<button 
 						onClick={()=>handleChangeLanguage()}

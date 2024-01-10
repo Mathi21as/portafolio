@@ -60,19 +60,32 @@ export default function Home() {
 					{t("Download Resume")}
 				</a>
 			</div>
-			
 		</div>
+		<a id="habilidades"></a>
+		<Habilidades />
+		<a id="proyectos"></a>
+		<section 
+			className='m-h-screen90 w-full mt-10 mb-0 px-12 lg:px-20 
+			py-12 lg:relative'
+			>
+			<h3
+				className='text-4xl lg:text-5xl mb-16 mx-auto w-max lg:mx-0'
+			>
+				{t("Projects")}
+			</h3>
+			<Projects />
+		</section>
+		<a id="sobremi"></a>
 		<section 
 			className='h-max w-full flex flex-col 
 				mt-10 px-12 lg:px-20 py-12 lg:relative'
 			>
-			<a id="sobremi"></a>
 			<h3 
-				className='text-4xl text-stone-600 lg:text-5xl lg:mt-20 mx-auto lg:mx-0'
+				className='text-4xl  lg:text-5xl mx-auto lg:mx-0'
 				>
 				{t("About me")}
 			</h3>
-			<p className='mt-12 lg:mt-10 text-xl lg:text-2xl font-light mx-auto text-justify'>
+			<p className='mt-12 lg:mt-10 text-stone-400 text-xl lg:text-2xl font-light mx-auto text-justify'>
 				{t("A few years \
 			ago, I entered the world of programming as a self-taught \
 			person and have been perfecting my knowledge in the area of ​​web development. \
@@ -86,23 +99,9 @@ export default function Home() {
 			my goals in this area.")}
 			</p>
 		</section>
-		<a id="habilidades"></a>
-		<Habilidades />
-		<a id="proyectos"></a>
-		<section 
-			className='m-h-screen90 w-full mt-10 mb-0 px-12 lg:px-20 
-			py-12 lg:relative'
-			>
-			<h3
-				className='text-4xl text-stone-600 lg:text-5xl mb-16 mx-auto w-max lg:mx-0'
-			>
-				{t("Projects")}
-			</h3>
-			<Projects />
-		</section>
 		<a id="contacto"></a>
 		<section 
-			className='m-h-screen90 mt-0 mb-20 px-12 lg:px-20 py-12 lg:relative flex flex-col gap-10 
+			className='m-h-screen90 mt-0 mt-20 mb-20 px-12 lg:px-20 py-12 lg:relative flex flex-col gap-10 
 			text-center lg:text-start lg:flex-col lg:w-4/6 mx-auto items-center bg-neutral-950/20'
 			>
 			<div className='w-full flex flex-col gap-2'>

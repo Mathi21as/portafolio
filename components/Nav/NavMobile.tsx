@@ -37,7 +37,7 @@ const NavMobile = ({setLanguage}:any) => {
 					<div className="_layer -mid"></div>
 					<div className="_layer -bottom"></div>
 				</div>
-				<nav className="menuppal bg-neutral-950/90">
+				<nav className="menuppal bg-neutral-950/90 h-screen">
 					<ul className="px-5 pt-8">
 						<li>
 							<a 

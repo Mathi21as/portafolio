@@ -169,8 +169,7 @@ a {
   transform: translate3d(0px, 0px, 0px);
 }
 .menuppal{
-	 padding-top: 35px;
-    height: max-content;
+	  padding-top: 35px;
     left: 0;
     overflow-y: scroll;
     position: fixed;
