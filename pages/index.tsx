@@ -39,8 +39,8 @@ export default function Home() {
 			<div className="flex flex-col lg:flex-col mt-56 grow lg:h-max">
 				<div className='w-full'>
 					<h1 
-						className='mx-auto h-full lg:pr-16 h-max mb-5
-							lg:pr-40 w-max text-4xl lg:text-5xl opacity-80'>
+						className='mx-auto h-full h-max mb-5
+							 w-max text-4xl lg:text-5xl opacity-80'>
 						Mathias Ledesma
 					</h1>
 					<h2 
