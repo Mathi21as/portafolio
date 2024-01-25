@@ -41,15 +41,6 @@ const Projects = () => {
 			code: "https://github.com/Mathi21as/portafolio"
 		},
 		{
-			imagen: "/resources/projects/encriptador.png",
-			ruta: "https://mathi21as.github.io/Encriptador-de-texto---Oracle/",
-			name: "Encryptor",
-			type: "webpage",
-			desc: "Text encryption challenge carried out in the ONE program",
-			technologies: ["HTML5", "CSS3", "Javascript"],
-			code: "https://github.com/Mathi21as/Encriptador-de-texto---Oracle"
-		},
-		{
 			imagen: "/resources/projects/hotelalura.png",
 			ruta: "#",
 			name: "Alura Hotel",
