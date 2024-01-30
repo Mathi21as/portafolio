@@ -10,10 +10,10 @@ module.exports = {
 		},
     extend: {
 			animation: {
-				typing: "typing 2.5s steps(25) 2s 1 normal both, blink 1s steps(1) infinite",
-				typing_en: "typing_en 2.5s steps(25) 2s 1 normal both, blink 1s steps(1) infinite",
-				typing_mobile: "typing_mobile 2.5s steps(25) 2s 1 normal both, blink 1s steps(1) infinite",
-				typing_mobile_en: "typing_mobile_en 2.5s steps(25) 2s 1 normal both, blink 1s steps(1) infinite",
+				typing: "typing 3s steps(25) 2s 1 normal both, blink 1s steps(1) infinite",
+				typing_en: "typing_en 3s steps(25) 2s 1 normal both, blink 1s steps(1) infinite",
+				typing_mobile: "typing_mobile 3s steps(25) 2s 1 normal both, blink 1s steps(1) infinite",
+				typing_mobile_en: "typing_mobile_en 3s steps(25) 2s 1 normal both, blink 1s steps(1) infinite",
 			},
 			spacing: {
 				"screen90": "90vh",
@@ -22,19 +22,19 @@ module.exports = {
 			keyframes: {
 				typing: {
 					"from": {width: "0"},
-					"to": {width: "20rem", paddingRight: "1px"}
+					"to": {width: "20rem", paddingRight: "3px"}
 				},
 				typing_en: {
 					"from": {width: "0"},
-					"to": {width: "17.3rem", paddingRight: "1px"}
+					"to": {width: "17.3rem", paddingRight: "3px"}
 				},
 				typing_mobile: {
 					"from": {width: "0"},
-					"to": {width: "16.2rem", paddingRight: "1px"}
+					"to": {width: "16.2rem", paddingRight: "3px"}
 				},
 				typing_mobile_en: {
 					"from": {width: "0"},
-					"to": {width: "13.9rem", paddingRight: "1px"}
+					"to": {width: "13.9rem", paddingRight: "3px"}
 				},
 				blink: {
 					"50%": {borderColor: "transparent"}

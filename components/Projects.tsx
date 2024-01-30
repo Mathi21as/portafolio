@@ -32,15 +32,6 @@ const Projects = () => {
 			code: "https://github.com/Mathi21as/FastNotes"
 		},
 		{
-			imagen: "/resources/projects/portafolio.png",
-			ruta: "#",
-			name: "Portfolio",
-			type: "webpage",
-			desc: "My portfolio",
-			technologies: ["NextJS", "Tailwind CSS"],
-			code: "https://github.com/Mathi21as/portafolio"
-		},
-		{
 			imagen: "/resources/projects/hotelalura.png",
 			ruta: "#",
 			name: "Alura Hotel",
@@ -81,22 +72,22 @@ const Projects = () => {
 
 	return(
 		<div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 w-full min-h-[calc(100vh-10vh)]
-			 lg:px-14 gap-4 ">
+			  gap-4 ">
 			{
 				project.map((project, index)=>{
 					return (
 						<div className="bg-neutral-950/20 rounded-xl py-8" key={index}>
-							<div className="px-6 flex flex-col gap-5 h-full">
+							<div className="px-6 flex flex-col gap-5 h-76">
 								<p className="text-2xl w-max mx-auto">{`${t(project.name)}`}</p>
-								<p className="text-xl font-light  text-stone-400">{t(project.desc)}</p>
-								<div className="flex gap-3 align_bottom mt-3 flex-wrap">
+								<p className="text-xl font-light text-stone-400 h-16 mb-5">{t(project.desc)}</p>
+								<div className="flex h-20 py-5 gap-3 mt-3 overflow-x-scroll">
 									{
 										project.technologies.map((technology, index) => {
-											return <p className="w-max bg-gray-800 font-light rounded-xl py-1 px-2" key={index}>{technology}</p>
+											return <p className="w-max bg-gray-800 font-light h-8 rounded-xl py-1 px-2 whitespace-nowrap" key={index}>{technology}</p>
 										})
 									}
 								</div>
-								<div className="flex flex-row justify-center gap-5 h-full items-end mt-3">
+								<div className="flex flex-row justify-center gap-5 items-end mt-3">
 										<Link 
 											href={project.ruta} 
 											target="_blank" 
@@ -125,7 +116,7 @@ const Projects = () => {
 												<Image width={"20"} height={"20"} src={"/resources/redes/github.png"} className="invert py-1" alt="github"/>
 												<p className="text-lg lg:text-sm lg:pt-1">GitHub</p>
 										</Link>
-									</div>
+								</div>
 							</div>
 						</div>
 					)

@@ -76,7 +76,7 @@ const NavMobile = ({setLanguage}:any) => {
 						</li>
 					</ul>
 				</nav>
-				<h1 className="text-2xl mx-5 my-auto">Portafolio</h1>
+				<h1 className="text-2xl mx-5 my-auto">{t("Portfolio")}</h1>
 			</nav>
 	)
 }

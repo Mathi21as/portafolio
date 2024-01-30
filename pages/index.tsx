@@ -36,24 +36,24 @@ export default function Home() {
 
         <link rel="icon" href="/favicon.png" />
       </Head>
-			<Nav setLanguage={setLanguage}/>
+	  <Nav setLanguage={setLanguage}/>
 
       <main 
-		className="w-full"
+		className="w-full lg:px-32 2xl:px-56"
 		>
         <div 
 			className='flex flex-col lg:flex-row w-full lg:px-10 justify-center'
 			>
 			
-			<div className="flex flex-col lg:flex-col mt-56 grow lg:h-max">
-				<div className='w-full'>
+			<div className="flex flex-col lg:flex-col mt-56 lg:h-max">
+				<div className='w-max mx-auto'>
 					<h1 
-						className='mx-auto h-full h-max mb-5
+						className='h-full h-max mb-5
 							 w-max text-4xl lg:text-5xl opacity-80'>
 						Mathias Ledesma
 					</h1>
 					<h2 
-						className={`mx-auto overflow-hidden whitespace-nowrap border-r-4 mt-2 
+						className={`overflow-hidden whitespace-nowrap border-r-4 mt-2 
 						opacity-80 border-blue-500 w-0 m-0 text-2xl lg:text-3xl 
 						${i18n.language == "es-ES" ? 
 							"animate-typing_mobile_en lg:animate-typing_en" 

@@ -3,7 +3,7 @@ const CardHabilidades = ({side, icons}:any) => {
 		return(<></>)
 		
 	return(
-		<div className="mx-auto w-full lg:w-11/12 pt-5 bg-neutral-950/20">
+		<div className="w-full pt-5 bg-neutral-950/20">
 			  <div className="">
 						<h1 
 							className='text-2xl lg:text-3xl h-full justify-center text-white text-center'
