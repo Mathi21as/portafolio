@@ -80,14 +80,14 @@ const Projects = () => {
 							<div className="px-6 flex flex-col gap-5 h-76">
 								<p className="text-2xl w-max mx-auto">{`${t(project.name)}`}</p>
 								<p className="text-xl font-light text-stone-400 h-16 mb-5">{t(project.desc)}</p>
-								<div className="flex h-20 py-5 gap-3 mt-3 overflow-x-scroll">
+								<div className="flex h-14 gap-3 mt-5 overflow-x-scroll">
 									{
 										project.technologies.map((technology, index) => {
 											return <p className="w-max bg-gray-800 font-light h-8 rounded-xl py-1 px-2 whitespace-nowrap" key={index}>{technology}</p>
 										})
 									}
 								</div>
-								<div className="flex flex-row justify-center gap-5 items-end mt-3">
+								<div className="flex flex-row justify-center gap-5 items-end">
 										<Link 
 											href={project.ruta} 
 											target="_blank" 
@@ -103,9 +103,9 @@ const Projects = () => {
 													alt="web page"/>
 												{
 													project.type == "webpage" ?
-														<p className="text-lg lg:text-sm lg:pt-1">{`${t("Web page")}`}</p>
+														<p className="text-lg lg:text-sm lg:pt-1 pr-6 md:pr-0">{`${t("Web page")}`}</p>
 														:
-														<p className="text-lg lg:text-sm lg:pt-1">{`${t("Desktop")}`}</p>
+														<p className="text-lg lg:text-sm lg:pt-1 pr-6 md:pr-0">{`${t("Desktop")}`}</p>
 												}
 										</Link>
 										<Link 
@@ -114,7 +114,7 @@ const Projects = () => {
 											className=" lg:hover:bg-blue-900/90 whitespace-nowrap 
 											p-2 h-min font-light rounded-xl bg-blue-950/90 flex flex-row gap-2">
 												<Image width={"20"} height={"20"} src={"/resources/redes/github.png"} className="invert py-1" alt="github"/>
-												<p className="text-lg lg:text-sm lg:pt-1">GitHub</p>
+												<p className="text-lg lg:text-sm lg:pt-1 pr-6 md:pr-0">GitHub</p>
 										</Link>
 								</div>
 							</div>
