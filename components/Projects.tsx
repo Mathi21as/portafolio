@@ -87,34 +87,34 @@ const Projects = () => {
 										})
 									}
 								</div>
-								<div className="flex flex-row justify-center gap-5 items-end">
+								<div className="flex flex-col lg:flex-row justify-center gap-5 items-end">
 										<Link 
 											href={project.ruta} 
 											target="_blank" 
 											className={`${project.type == "webpage" ? "bg-blue-950/90 lg:hover:bg-blue-900/90" : 
-												"bg-blue-950/50 pointer-events-none"} text-lg lg:text-sm whitespace-nowrap 
-												p-2 h-min font-light rounded-xl flex flex-row gap-2`}>
+												"bg-blue-950/50 pointer-events-none"} text-lg w-full lg:w-max lg:text-sm whitespace-nowrap 
+												py-2 lg:px-3 h-min font-light rounded-xl justify-center flex flex-row gap-2`}>
 												<Image 
-													width={"20"} 
-													height={"20"} 
+													width={"15"} 
+													height={"15"} 
 													src={project.type == "webpage" ? "/resources/redes/webpage.svg"
 														: "/resources/redes/desktop.svg"} 
 													className="invert py-1" 
 													alt="web page"/>
 												{
 													project.type == "webpage" ?
-														<p className="text-lg lg:text-sm lg:pt-1 pr-6 md:pr-0">{`${t("Web page")}`}</p>
+														<p className="text-base">{`${t("Web page")}`}</p>
 														:
-														<p className="text-lg lg:text-sm lg:pt-1 pr-6 md:pr-0">{`${t("Desktop")}`}</p>
+														<p className="text-base">{`${t("Desktop")}`}</p>
 												}
 										</Link>
 										<Link 
 											href={project.code} 
 											target="_blank" 
 											className=" lg:hover:bg-blue-900/90 whitespace-nowrap 
-											p-2 h-min font-light rounded-xl bg-blue-950/90 flex flex-row gap-2">
-												<Image width={"20"} height={"20"} src={"/resources/redes/github.png"} className="invert py-1" alt="github"/>
-												<p className="text-lg lg:text-sm lg:pt-1 pr-6 md:pr-0">GitHub</p>
+											py-2 h-min font-light rounded-xl lg:px-3 bg-blue-950/90 w-full lg:w-max justify-center flex flex-row gap-2">
+												<Image width={"15"} height={"15"} src={"/resources/redes/Github.svg"} className="invert py-1" alt="github"/>
+												<p className="text-base">GitHub</p>
 										</Link>
 								</div>
 							</div>
