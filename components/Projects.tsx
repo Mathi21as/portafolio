@@ -65,7 +65,7 @@ const Projects = () => {
 			type: "webpage",
 			desc: "Management system of an academy carried out as a team at the JAM 2023 of San Juan Tec.",
 			technologies: ["Jinja2", "Flask", "Python", "MySQL", "Bootstrap", "HTML5", "CSS3"],
-			code: "https://github.com/DavidCosta92/academia_sj_tec_JAM23/tree/mathias"
+			code: "https://github.com/Mathi21as/academia_sj_tec_JAM23"
 		},
 	]
 	const {t} = useTranslation();
