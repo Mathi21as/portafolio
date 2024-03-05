@@ -1,0 +1,11 @@
+Feedback portafolio
+
+- Quitar proyectos de cursos
+
+- Desarrollar backends que se conecten a las apis
+
+- Desarrollar un backend para FastNotes que use el token de inicio de sesion de google como autenticacion
+
+- Usar swagger en todos los backends
+
+Aprender diagrama de secuencias
