@@ -18,7 +18,7 @@ const NavDesktop = ({setLanguage}:any) => {
 	return(
 			<nav 
 					className='fixed top-0 md:bottom-0 md:right-0 h-14 w-full 
-					w-full bg-neutral-950/90 hidden md:flex md:flex-row justify-center 
+					w-full bg-neutral-950/60 hidden md:flex md:flex-row justify-center 
 					text-sm md:text-lg z-10 md:[&>*]:scale-90 md:px-56 lg:px-72'
 					>
 					<a 

@@ -39,22 +39,23 @@ export default function Home() {
 	  <Nav setLanguage={setLanguage}/>
 
       <main 
-		className="w-full lg:px-32 2xl:px-56"
+		className="w-full lg:px-0 2xl:px-0"
 		>
         <div 
-			className='flex flex-col lg:flex-row w-full lg:px-10 justify-center'
+			className='flex flex-col lg:flex-row w-full lg:px-10 
+			bg-[url("../public/resources/workspace-1280538_1280.jpg")] bg-no-repeat bg-cover bg-center'
 			>
 			
-			<div className="flex flex-col lg:flex-col mt-56 lg:h-max">
-				<div className='w-max mx-auto'>
+			<div className="flex flex-col lg:flex-col ml-8 lg:ml-0 my-48 lg:my-56 lg:h-max">
+				<div className='w-max'>
 					<h1 
 						className='h-full h-max mb-5
-							 w-max text-4xl lg:text-5xl opacity-80'>
+							 w-max text-4xl lg:text-7xl opacity-80'>
 						Mathias Ledesma
 					</h1>
 					<h2 
 						className={`overflow-hidden whitespace-nowrap border-r-4 mt-2 
-						opacity-80 border-blue-500 w-0 m-0 text-2xl lg:text-3xl 
+						opacity-80 border-blue-500 w-0 m-0 text-2xl lg:text-4xl 
 						${i18n.language == "es-ES" ? 
 							"animate-typing_mobile_en lg:animate-typing_en" 
 							: 
@@ -63,13 +64,38 @@ export default function Home() {
 					</h2>
 				</div>
 				<a 
-					className="mx-auto mt-10 bg-blue-950/90 hover:bg-blue-900 
+					className="w-max mt-10 bg-blue-950/90 hover:bg-blue-900 
 						text-white font-bold py-2 px-4 rounded" 
 					href="/resources/MathiasLedesmaFullStackDeveloperResume.pdf">
 					{t("Download Resume")}
 				</a>
 			</div>
 		</div>
+		<a id="sobremi"></a>
+		<section 
+			className='h-max w-full flex flex-col 
+				mt-10 px-12 lg:px-20 py-12 lg:relative'
+			>
+			<h3 
+				className='text-4xl  lg:text-5xl mx-auto lg:mx-0'
+				>
+				{t("About me")}
+			</h3>
+			<p className='mt-12 lg:mt-10 text-stone-400 text-xl 
+				lg:text-2xl font-light mx-auto text-justify'>
+				{t("A few years \
+			ago, I entered the world of programming as a self-taught \
+			person and have been perfecting my knowledge in the area of ​​web development. \
+			Although I have the necessary foundation to work as a front-end \
+			developer, I feel a greater affinity for logic and programming \
+			than for design. For this reason, I decided to embark on a training \
+			process in the field of back-end and, at the same time, carry out \
+			various projects to accumulate experience. My goal is to prepare \
+			for a career as a back-end or full-stack developer, as I am convinced \
+			that my passion and skills in programming will lead me to achieve \
+			my goals in this area.")}
+			</p>
+		</section>
 		<a id="habilidades"></a>
 		<Habilidades />
 		<a id="proyectos"></a>
@@ -83,30 +109,6 @@ export default function Home() {
 				{t("Projects")}
 			</h3>
 			<Projects />
-		</section>
-		<a id="sobremi"></a>
-		<section 
-			className='h-max w-full flex flex-col 
-				mt-10 px-12 lg:px-20 py-12 lg:relative'
-			>
-			<h3 
-				className='text-4xl  lg:text-5xl mx-auto lg:mx-0'
-				>
-				{t("About me")}
-			</h3>
-			<p className='mt-12 lg:mt-10 text-stone-400 text-xl lg:text-2xl font-light mx-auto text-justify'>
-				{t("A few years \
-			ago, I entered the world of programming as a self-taught \
-			person and have been perfecting my knowledge in the area of ​​web development. \
-			Although I have the necessary foundation to work as a front-end \
-			developer, I feel a greater affinity for logic and programming \
-			than for design. For this reason, I decided to embark on a training \
-			process in the field of back-end and, at the same time, carry out \
-			various projects to accumulate experience. My goal is to prepare \
-			for a career as a back-end or full-stack developer, as I am convinced \
-			that my passion and skills in programming will lead me to achieve \
-			my goals in this area.")}
-			</p>
 		</section>
 		<a id="contacto"></a>
 		<section 

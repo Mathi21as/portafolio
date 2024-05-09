@@ -22,11 +22,11 @@ module.exports = {
 			keyframes: {
 				typing: {
 					"from": {width: "0"},
-					"to": {width: "20rem", paddingRight: "3px"}
+					"to": {width: "24rem", paddingRight: "3px"}
 				},
 				typing_en: {
 					"from": {width: "0"},
-					"to": {width: "17.3rem", paddingRight: "3px"}
+					"to": {width: "20.8rem", paddingRight: "3px"}
 				},
 				typing_mobile: {
 					"from": {width: "0"},

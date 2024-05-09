@@ -32,24 +32,6 @@ const Projects = () => {
 			code: "https://github.com/Mathi21as/FastNotes"
 		},
 		{
-			imagen: "/resources/projects/hotelalura.png",
-			ruta: "#",
-			name: "Alura Hotel",
-			type: "desktop app",
-			desc: "Alura Hotel guest registration challenge of the ONE program",
-			technologies: ["Java", "JPA/Hibernate", "MySQL"],
-			code: "https://github.com/Mathi21as/HotelAlura"
-		},
-		{
-			imagen: "/resources/projects/conversor.png",
-			ruta: "#",
-			name: "Converter",
-			type: "desktop app",
-			desc: "Challenge converter of the ONE program made with Java and Swing for the graphic part",
-			technologies: ["Java", "Java Swing"],
-			code: "https://github.com/Mathi21as/ConversorAlura"
-		},
-		{
 			imagen: "/resources/projects/weathernow.png",
 			ruta: "https://mathi21as.github.io/weathernow/",
 			name: "WeatherNow",
