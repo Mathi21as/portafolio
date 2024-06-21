@@ -67,7 +67,7 @@ export default function Home() {
 				<a 
 					className="w-max mt-10 bg-blue-950/90 hover:bg-blue-900 
 						text-white font-bold py-2 px-4 rounded" 
-					href="/resources/MathiasLedesmaFullStackDeveloperResume.pdf">
+					href="/resources/MathiasLedesmaBackendCV.pdf">
 					{t("Download Resume")}
 				</a>
 			</div>
